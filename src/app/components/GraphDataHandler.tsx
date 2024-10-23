@@ -63,9 +63,9 @@ const GraphDataHandler: React.FC = () => {
   const hasCovariates = covariates.length > 0;
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "development") {
-      loadDefaultFiles();
-    }
+    // if (process.env.NODE_ENV === "development") {
+    loadDefaultFiles();
+    // }
     // eslint-disable-next-line
   }, []);
 
