@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -79,7 +79,11 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router basename="/graphrag-visualizer">
+      <Router
+        basename={
+          process.env.NODE_ENV === "production" ? "/iswc-tutorial" : "/"
+        }
+      >
         <Container disableGutters maxWidth={false}>
           <CssBaseline />
 
@@ -98,7 +102,7 @@ const App: React.FC = () => {
           >
             <IconButton
               component={Link}
-              href="https://github.com/noworneverev/graphrag-visualizer"
+              href="https://github.com/noworneverev/iswc-tutorial"
               target="_blank"
               rel="noopener"
               color="inherit"
