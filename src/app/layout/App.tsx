@@ -79,12 +79,7 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router
-      // basename={
-      //   process.env.NODE_ENV === "production" ? "/iswc-tutorial" : "/"
-      // }
-      // basename={process.env.PUBLIC_URL}
-      >
+      <Router>
         <Container disableGutters maxWidth={false}>
           <CssBaseline />
 
@@ -126,17 +121,11 @@ const App: React.FC = () => {
           </Box>
           <Routes>
             {" "}
-            {/* **Added Routes** */}
             <Route path="/" element={<Navigate to="/upload" replace />} />{" "}
-            {/* **Redirect Root to /upload** */}
             <Route path="/upload" element={<GraphDataHandler />} />{" "}
-            {/* **Upload Tab** */}
             <Route path="/graph" element={<GraphDataHandler />} />{" "}
-            {/* **Graph Visualization Tab** */}
             <Route path="/data" element={<GraphDataHandler />} />{" "}
-            {/* **Data Tables Tab** */}
             <Route path="*" element={<Navigate to="/upload" replace />} />{" "}
-            {/* **Catch-All Redirect** */}
           </Routes>
 
           {/* <GraphDataHandler /> */}
