@@ -80,9 +80,10 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router
-        basename={
-          process.env.NODE_ENV === "production" ? "/iswc-tutorial" : "/"
-        }
+      // basename={
+      //   process.env.NODE_ENV === "production" ? "/iswc-tutorial" : "/"
+      // }
+      // basename={process.env.PUBLIC_URL}
       >
         <Container disableGutters maxWidth={false}>
           <CssBaseline />
